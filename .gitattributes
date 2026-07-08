@@ -1,0 +1,13 @@
+* text=auto
+
+*.py text
+
+*.sh text eol=lf
+
+*.bat text eol=crlf
+
+*.png binary
+
+*.jpg binary
+
+*.pdf binary
