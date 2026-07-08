@@ -1,0 +1,3 @@
+[submodule "external/payment-sdk"]
+	path = external/payment-sdk
+	url = https://github.com/sugunanarayanarao/payment-sdk
