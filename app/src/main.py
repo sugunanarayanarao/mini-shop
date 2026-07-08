@@ -1,11 +1,6 @@
-"""
-Mini Shop Demo Application
+import bootstrap
 
-This application will later demonstrate:
-- Monorepo
-- Git Submodule
-- Git Subtree
-"""
+from json_utils import pretty_print
 
 TAX_PERCENT = 18
 
@@ -18,15 +13,20 @@ def calculate_total(price: int) -> int:
     return price + calculate_tax(price)
 
 
+def create_invoice(price: int) -> dict:
+
+    return {
+        "price": price,
+        "tax": calculate_tax(price),
+        "total": calculate_total(price),
+    }
+
+
 def main():
 
-    price = 100
+    invoice = create_invoice(100)
 
-    total = calculate_total(price)
-
-    print(f"Price : {price}")
-    print(f"Tax   : {calculate_tax(price)}")
-    print(f"Total : {total}")
+    print(pretty_print(invoice))
 
 
 if __name__ == "__main__":
