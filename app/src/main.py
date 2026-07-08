@@ -1,5 +1,3 @@
-import bootstrap
-
 from json_utils import pretty_print
 
 TAX_PERCENT = 18
@@ -14,7 +12,6 @@ def calculate_total(price: int) -> int:
 
 
 def create_invoice(price: int) -> dict:
-
     return {
         "price": price,
         "tax": calculate_tax(price),
@@ -23,7 +20,6 @@ def create_invoice(price: int) -> dict:
 
 
 def main():
-
     invoice = create_invoice(100)
 
     print(pretty_print(invoice))

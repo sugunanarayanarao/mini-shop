@@ -12,5 +12,6 @@ def pretty_print(data: dict) -> str:
         sort_keys=True,
     )
 
+
 def compact_print(data: dict) -> str:
     return json.dumps(data, separators=(",", ":"))
