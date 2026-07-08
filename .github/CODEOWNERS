@@ -1,0 +1,20 @@
+# Default reviewers
+* @sugunanarayanarao
+
+# Shopping application
+/app/ @shopping-team
+
+# External payment team
+/external/payment-sdk/ @payments-team
+
+# External json library
+/external/json-utils/ @platform-team
+
+# Documentation
+/docs/ @architect
+
+# Build scripts
+/scripts/ @devops
+
+# GitHub workflows
+/.github/ @devops

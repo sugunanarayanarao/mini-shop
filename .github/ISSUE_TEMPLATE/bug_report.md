@@ -1,0 +1,26 @@
+---
+name: Bug Report
+about: Report a bug
+---
+
+## Description
+
+Describe the bug.
+
+## Steps
+
+1.
+
+2.
+
+3.
+
+## Expected Behavior
+
+## Actual Behavior
+
+## Environment
+
+OS:
+
+Python:
