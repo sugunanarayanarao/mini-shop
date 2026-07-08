@@ -1,0 +1,36 @@
+[build-system]
+requires = [
+    "setuptools>=68",
+    "wheel"
+]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "json-utils"
+version = "1.0.0"
+description = "Simple JSON utility library"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = [
+    "json_utils*"
+]
+
+
+[tool.pytest.ini_options]
+testpaths = [
+    "tests"
+]
+
+
+[tool.black]
+line-length = 88
+
+
+[tool.ruff]
+line-length = 88
