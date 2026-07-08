@@ -1,20 +1,30 @@
 PYTHON=python
 
-.PHONY: build test run lint clean
-
-build:
-	@echo "Nothing to build"
+.PHONY: \
+ build \
+ test \
+ lint \
+ verify \
+ run \
+ clean
 
 run:
 	$(PYTHON) app/src/main.py
 
+build:
+	./scripts/build.sh
+
 test:
-	pytest
+	./scripts/test.sh
 
 lint:
-	ruff check .
-	black --check .
+	./scripts/lint.sh
+
+verify:
+	./scripts/verify.sh
 
 clean:
 	find . -name "__pycache__" -type d -exec rm -rf {} +
 	find . -name "*.pyc" -delete
+	find . -name ".pytest_cache" -type d -exec rm -rf {} +
+	find . -name ".ruff_cache" -type d -exec rm -rf {} +
